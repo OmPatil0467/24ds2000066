@@ -1,0 +1,20 @@
+name: Sample GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Print a message
+        run: echo "Hello, world! from GitHub Actions"
+
+      - name: Print email identifier
+        run: echo "Action executed by 24ds2000066@ds.study.iitm.ac.in"
